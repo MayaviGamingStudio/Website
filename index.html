@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ARCADE VOID — Play In Browser</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Background grid -->
+  <div class="bg-grid"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-bracket">[</span>
+        ARCADE<span class="logo-accent">VOID</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <nav class="site-nav">
+        <a href="#games">GAMES</a>
+        <a href="#about">ABOUT</a>
+        <a href="https://github.com" target="_blank">GITHUB</a>
+      </nav>
+    </div>
+    <div class="header-ticker">
+      <span>▶ PLAY IN BROWSER &nbsp;&nbsp;◆&nbsp;&nbsp; NO INSTALL REQUIRED &nbsp;&nbsp;◆&nbsp;&nbsp; OPEN SOURCE &nbsp;&nbsp;◆&nbsp;&nbsp; ADD YOUR OWN GAMES &nbsp;&nbsp;◆&nbsp;&nbsp; PLAY IN BROWSER &nbsp;&nbsp;◆&nbsp;&nbsp;</span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">// WELCOME TO THE VOID</div>
+    <h1 class="hero-title">
+      <span class="line1">GAME</span>
+      <span class="line2">ARCADE</span>
+    </h1>
+    <p class="hero-sub">Classic games. Zero downloads. Pure browser power.</p>
+    <a href="#games" class="cta-btn">
+      <span class="btn-inner">INSERT COIN</span>
+      <span class="btn-glow"></span>
+    </a>
+  </section>
+
+  <!-- Games Grid -->
+  <section class="games-section" id="games">
+    <div class="section-label">// SELECT GAME</div>
+
+    <div class="games-grid">
+
+      <!-- Game Card 1: Snake -->
+      <a href="snake/index.html" class="game-card active">
+        <div class="card-number">01</div>
+        <div class="card-icon">🐍</div>
+        <div class="card-info">
+          <h2 class="card-title">SNAKE</h2>
+          <p class="card-desc">Navigate the serpent. Eat. Grow. Survive.</p>
+          <div class="card-tags">
+            <span class="tag">CLASSIC</span>
+            <span class="tag">1-PLAYER</span>
+          </div>
+        </div>
+        <div class="card-status">PLAY NOW ▶</div>
+        <div class="card-border-anim"></div>
+      </a>
+
+      <!-- Game Card 2: Coming Soon -->
+      <div class="game-card empty">
+        <div class="card-number">02</div>
+        <div class="card-icon dim">?</div>
+        <div class="card-info">
+          <h2 class="card-title dim">COMING SOON</h2>
+          <p class="card-desc dim">This slot is waiting for its game.</p>
+          <div class="card-tags">
+            <span class="tag dim">UNLOCKED</span>
+          </div>
+        </div>
+        <div class="card-status dim">— VACANT —</div>
+      </div>
+
+      <!-- Game Card 3: Coming Soon -->
+      <div class="game-card empty">
+        <div class="card-number">03</div>
+        <div class="card-icon dim">?</div>
+        <div class="card-info">
+          <h2 class="card-title dim">COMING SOON</h2>
+          <p class="card-desc dim">This slot is waiting for its game.</p>
+          <div class="card-tags">
+            <span class="tag dim">UNLOCKED</span>
+          </div>
+        </div>
+        <div class="card-status dim">— VACANT —</div>
+      </div>
+
+      <!-- Game Card 4: Coming Soon -->
+      <div class="game-card empty">
+        <div class="card-number">04</div>
+        <div class="card-icon dim">?</div>
+        <div class="card-info">
+          <h2 class="card-title dim">COMING SOON</h2>
+          <p class="card-desc dim">This slot is waiting for its game.</p>
+          <div class="card-tags">
+            <span class="tag dim">UNLOCKED</span>
+          </div>
+        </div>
+        <div class="card-status dim">— VACANT —</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about-section" id="about">
+    <div class="section-label">// ABOUT THIS ARCADE</div>
+    <div class="about-inner">
+      <div class="about-text">
+        <p>ARCADE VOID is an open-source browser gaming platform hosted on GitHub Pages. All games run entirely in-browser using vanilla JavaScript and HTML5 Canvas — no plugins, no installs.</p>
+        <p>Want to contribute a game? Fork the repo, drop your game folder under the root, and submit a pull request.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">01</span><span class="stat-label">GAMES LIVE</span></div>
+        <div class="stat"><span class="stat-num">03</span><span class="stat-label">SLOTS OPEN</span></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">PLAYS POSSIBLE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">[ARCADE VOID]</span>
+      <span class="footer-copy">Hosted on GitHub Pages · Open Source · Built for the browser</span>
+      <span class="footer-blink">█</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
