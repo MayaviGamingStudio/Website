@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SNAKE — ARCADE VOID · MayaviStudio</title>
+  <link rel="stylesheet" href="css/game.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="scanlines"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Header -->
+  <header class="game-header">
+    <a href="../index.html" class="back-btn">← ARCADE</a>
+    <div class="header-title">
+      <span class="ht-studio">MAYAVISTUDIO</span>
+      <span class="ht-sep">/</span>
+      <span class="ht-game">SNAKE</span>
+    </div>
+    <div class="header-right">v1.0</div>
+  </header>
+
+  <!-- Main game layout -->
+  <main class="game-layout">
+
+    <!-- Left panel: stats -->
+    <aside class="panel panel-left">
+      <div class="stat-block">
+        <div class="stat-label">SCORE</div>
+        <div class="stat-value" id="score">0</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">HIGH SCORE</div>
+        <div class="stat-value" id="highscore">0</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">LEVEL</div>
+        <div class="stat-value" id="level">1</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">LENGTH</div>
+        <div class="stat-value" id="length">1</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="controls-block">
+        <div class="ctrl-label">CONTROLS</div>
+        <div class="ctrl-row"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></div>
+        <div class="ctrl-row"><kbd>P</kbd> Pause</div>
+        <div class="ctrl-row"><kbd>R</kbd> Restart</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="speed-block">
+        <div class="ctrl-label">SPEED</div>
+        <div class="speed-options" id="speed-options">
+          <button class="speed-btn" data-speed="slow">SLOW</button>
+          <button class="speed-btn active" data-speed="normal">NORMAL</button>
+          <button class="speed-btn" data-speed="fast">FAST</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Centre: canvas -->
+    <section class="game-centre">
+      <div class="canvas-wrap" id="canvas-wrap">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Overlay screens -->
+        <div class="overlay" id="overlay-start">
+          <div class="overlay-inner">
+            <div class="ov-studio">MAYAVISTUDIO</div>
+            <div class="ov-title">SNAKE</div>
+            <div class="ov-sub">Navigate. Eat. Grow. Survive.</div>
+            <button class="ov-btn" id="btn-start">INSERT COIN ▶</button>
+            <div class="ov-hint">Use WASD or Arrow keys</div>
+          </div>
+        </div>
+
+        <div class="overlay hidden" id="overlay-pause">
+          <div class="overlay-inner">
+            <div class="ov-title small">PAUSED</div>
+            <button class="ov-btn" id="btn-resume">RESUME ▶</button>
+          </div>
+        </div>
+
+        <div class="overlay hidden" id="overlay-gameover">
+          <div class="overlay-inner">
+            <div class="ov-title small">GAME OVER</div>
+            <div class="ov-score-line">SCORE: <span id="final-score">0</span></div>
+            <div class="ov-score-line dim" id="new-best-line" style="display:none;">NEW BEST!</div>
+            <button class="ov-btn" id="btn-restart">PLAY AGAIN ▶</button>
+            <a href="../index.html" class="ov-link">← BACK TO ARCADE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right panel: info -->
+    <aside class="panel panel-right">
+      <div class="info-block">
+        <div class="ctrl-label">HOW TO PLAY</div>
+        <ul class="info-list">
+          <li>Guide the snake to eat the <span class="y">yellow</span> food</li>
+          <li>Each food grows your snake and adds to your score</li>
+          <li>Don't hit the walls or your own tail</li>
+          <li>Speed increases every 5 foods eaten</li>
+        </ul>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="info-block">
+        <div class="ctrl-label">SCORING</div>
+        <div class="score-table">
+          <div class="sc-row"><span>Food</span><span class="y">+10 pts</span></div>
+          <div class="sc-row"><span>Level bonus</span><span class="y">×Level</span></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="info-block">
+        <div class="ctrl-label">MADE BY</div>
+        <div class="studio-badge">
+          <span class="sb-dot"></span>
+          MAYAVISTUDIO
+        </div>
+        <div class="studio-sub">ARCADE VOID · 2025</div>
+      </div>
+    </aside>
+
+  </main>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
